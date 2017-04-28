@@ -1,0 +1,34 @@
+<input class='form-control' type='text' id='place'>
+<div ng-init='vm.initialize()' id='map'></div>
+<div id='info'>
+  <div id='location'>{{vm.loc.name}}</div>
+    <ul>
+      <li id='condition'>{{vm.forecast.currently.summary}}</li>
+      <skycon icon='vm.forecast.currently.icon' size='40'></skycon> 
+      <li id='temp'>{{vm.currentTemp}}</li>
+    </ul>
+</div>
+
+ <!--   -->
+  <div class='forecast'>
+    <div ng-repeat='day in vm.forecast.daily.data | limitTo: 7 : 1' ng-init='showme = false' ng-click='showme = !showme'>
+      <div class="forecast-list"><ul class="list">
+        <li class="item" id="day"> {{vm.getDate(day.time)}}</li>
+        <li class="item"><sky-icon icon-type= "{{day.icon}}"></sky-icon></li>
+        <li class="item" id="max">{{vm.maxTemp(day.temperatureMax)}} </li>
+        <li class="item" id="min">{{vm.minTemp(day.temperatureMin)}} </li>
+        <li class='item'>+</li>
+      </ul></div>
+      <div class='box' ng-show='showme'>
+        <ul>
+          <li>SUNRISE: {{vm.getTime(day.sunriseTime)}} </li>
+          <li>SUNSET: {{vm.getTime(day.sunsetTime)}} </li>
+          <br>
+          <li>{{day.summary}}</li>
+        <ul>
+      </div>  
+    </div>
+  </div>
+    <!-- <skycon icon="day.icon" size='100'></skycon> -->
+  <!-- </div> -->
+</div>

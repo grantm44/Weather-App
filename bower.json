@@ -1,0 +1,21 @@
+{
+  "name": "weather-app",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Grant McDonnal <grantmcdonnal@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-skycons": "^2.0.2"
+  }
+}
