@@ -40,7 +40,8 @@ passport.deserializeUser(function(googleId, done){
 });
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/capstone');
+//mongodb://grant:<PASSWORD>@cluster0-shard-00-00-fgfgg.mongodb.net:27017,cluster0-shard-00-01-fgfgg.mongodb.net:27017,cluster0-shard-00-02-fgfgg.mongodb.net:27017/<DATABASE>?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+mongoose.connect('mongodb://grant:8M9CHy6KBiJHGFX0@cluster0-shard-00-00-fgfgg.mongodb.net:27017,cluster0-shard-00-01-fgfgg.mongodb.net:27017,cluster0-shard-00-02-fgfgg.mongodb.net:27017/capstone?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin');
 var db = mongoose.connection;
 
 
