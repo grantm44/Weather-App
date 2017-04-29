@@ -30,6 +30,7 @@
     "ngmap": "^1.18.4",
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
+    "passport-google-oauth20": "^1.0.0",
     "path": "^0.12.7",
     "skycons": "^1.0.0",
     "twit": "^2.2.5",
