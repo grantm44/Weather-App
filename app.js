@@ -18,7 +18,7 @@ var GoogleStrategy = require('passport-google-oauth20').Strategy;
 passport.use(new GoogleStrategy({
     clientID: '253001299435-ne5966tplaindj7pe8bfnhcs3883bj82.apps.googleusercontent.com',
     clientSecret: 'fn4rnRkc5zkHbLyNp0iQjdtj',
-    callbackURL: "http://localhost:3000/api/map"
+    callbackURL: "http://http://ec2-34-208-142-31.us-west-2.compute.amazonaws.com:3000/api/map"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOneAndUpdate(
